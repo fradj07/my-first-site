@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>موقعي الأول</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,14 +14,16 @@
       text-align: center;
       padding: 40px;
     }
-تع    .box {
+
+    .card {
       background: rgba(0,0,0,0.2);
       padding: 30px;
       border-radius: 15px;
       max-width: 400px;
       margin: auto;
     }
-    a {
+
+    a, button {
       display: block;
       margin: 10px 0;
       padding: 12px;
@@ -29,29 +32,46 @@
       text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
-    }<div class="card"<hr>
+      border: none;
+    }
 
-<h2>تحويل صورة إلى نص</h2>
+    input {
+      margin-top: 10px;
+    }
 
-<input type="file" id="imageInput" accept="image/*">
-<br><br>
-
-<button onclick="convertImage()">تحويل</button>
-
-<p id="result"></p>      >
+    #result {
+      margin-top: 15px;
+    }
   </style>
 </head>
-<body<script>
-function convertImage() {
-  document.getElementById("result").innerText =
-    "⏳ جارٍ تحليل الصورة... (مثال تجريبي)";
-}
-</script>
+
+<body>
+
+  <div class="card">
     <h1>🎉 مرحبًا بك</h1>
     <p>هذا موقعي الأول باستخدام GitHub Pages</p>
 
-    <a href="https://wa.me/XXXXXXXXXX">📱 تواصل واتساب</a>
+    <a href="https://wa.me/XXXXXXXXX">📱 تواصل واتساب</a>
     <a href="https://facebook.com">📘 فيسبوك</a>
+
+    <hr>
+
+    <h2>تحويل صورة إلى نص</h2>
+
+    <input type="file" id="imageInput" accept="image/*">
+    <br><br>
+
+    <button onclick="convertImage()">تحويل</button>
+
+    <p id="result"></p>
   </div>
+
+  <script>
+    function convertImage() {
+      document.getElementById("result").innerText =
+        "⏳ جارٍ تحليل الصورة... (مثال تجريبي)";
+    }
+  </script>
+
 </body>
 </html>
