@@ -42,7 +42,7 @@
       margin-top: 15px;
     }
   </style>
-</head>
+</head<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>>
 
 <body>
 
@@ -66,10 +66,28 @@
   </div>
 
   <script>
-    function convertImage() {
-      document.getElementById("result").innerText =
-        "⏳ جارٍ تحليل الصورة... (مثال تجريبي)";
-    }
+    <script>
+function convertImage() {
+  const file = document.getElementById("imageInput").files[0];
+  if (!file) {
+    alert("يرجى اختيار صورة أولاً");
+    return;
+  }
+
+  document.getElementById("result").innerText = "⏳ جاري تحليل الصورة...";
+
+  Tesseract.recognize(
+    file,
+    'ara+eng',
+    { logger: m => console.log(m) }
+  ).then(({ data: { text } }) => {
+    document.getElementById("result").innerText =
+      text || "❌ لم يتم التعرف على نص";
+  }).catch(() => {
+    document.getElementById("result").innerText = "حدث خطأ أثناء التحليل";
+  });
+}
+</script>
   </script>
 
 </body>
