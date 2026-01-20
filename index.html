@@ -13,7 +13,7 @@
       text-align: center;
       padding: 40px;
     }
-    .box {
+تع    .box {
       background: rgba(0,0,0,0.2);
       padding: 30px;
       border-radius: 15px;
@@ -29,11 +29,24 @@
       text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
-    }
+    }<div class="card"<hr>
+
+<h2>تحويل صورة إلى نص</h2>
+
+<input type="file" id="imageInput" accept="image/*">
+<br><br>
+
+<button onclick="convertImage()">تحويل</button>
+
+<p id="result"></p>      >
   </style>
 </head>
-<body>
-  <div class="box">
+<body<script>
+function convertImage() {
+  document.getElementById("result").innerText =
+    "⏳ جارٍ تحليل الصورة... (مثال تجريبي)";
+}
+</script>
     <h1>🎉 مرحبًا بك</h1>
     <p>هذا موقعي الأول باستخدام GitHub Pages</p>
 
